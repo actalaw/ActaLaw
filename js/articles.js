@@ -259,6 +259,91 @@ O princípio não é ilimitado. Reincidentes habituais, réus com histórico cri
 
 A aplicação do princípio é uma das mais debatidas em toda a jurisprudência penal brasileira — e, na prática, depende muito do contexto e da análise caso a caso pelo juiz.
     `,
+  },
+  {
+    id: 7,
+    title: "A rejeição de Jorge Messias ao STF: Um evento histórico para o Brasil.",
+    category: "noticias",
+    categoryLabel: "Notícias",
+    date: "2026-05-01",
+    readTime: 4,
+    featured: true,
+    image: "https://images.unsplash.com/photo-1678440515574-0dc75039b8fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VwcmVtZSUyMGNvdXJ0fGVufDB8fDB8fHww",
+    excerpt: "A quebra de um padrão que perdurou por 132 anos no Brasil. Como a rejeição de Jorge Messias reflete no cenário político e judiciário",
+    content: `
+**Por que a rejeição de Jorge Messias pelo Senado é um evento histórico para o Brasil**
+
+Por mais de um século, o Senado brasileiro atuou como a instância final previsível na aprovação de indicados ao Supremo Tribunal Federal: questionava, debatia e, ao fim, chancelava as escolhas presidenciais com regularidade. 
+
+Esse padrão de deferência institucional foi repentinamente interrompido em 29 de abril de 2026, quando o Senado rejeitou a indicação de Jorge Messias, então ministro da Advocacia-Geral da União (AGU), numa decisão que reverberou em Brasília.
+
+Os números expõem o recuo do Planalto: 34 votos favoráveis e 42 contrários. 
+
+Ao não alcançar a maioria absoluta de 41 votos, rompeu-se uma sequência de 132 anos de aprovações, sinalizando uma ruptura no equilíbrio entre os Poderes. O que antes era uma formalidade procedimental tornou-se um espaço de elevado conflito institucional.
+
+
+**A quebra de uma tradição de 132 anos e o precedente de 1894**
+
+Para compreender a dimensão do episódio, é fundamental retornar a 1894, durante o governo Floriano Peixoto (1891-1894), quando houve uma ruptura sistêmica entre Poder Executivo e Senado, resultando na rejeição de cinco indicados:  
+
+Cândido Barata Ribeiro, Ewerton Quadros, Galvão de Queiroz, Demóstenes Lobo e Antônio Seve Navarro.
+
+Desde a promulgação da Constituição de 1988, o Senado jamais havia exercido seu poder de veto sobre um indicado ao STF. A rejeição de Jorge Messias reflete um colapso institucional semelhante àquele enfrenta. 
+
+Como sintetizou o senador Jaques Wagner:
+
+ 
+*“Jorge Messias não perdeu a indicação ao Supremo. Quem perdeu foi o pacto constitucional, a Nova República. Foi o Brasil.”*
+
+
+**O fator Alcolumbre: uma disputa de preferências**
+
+
+A rejeição foi o desfecho de uma prolongada disputa política entre o presidente Lula e o presidente do Senado, Davi Alcolumbre. Enquanto o Planalto sustentava o nome de Messias, Alcolumbre mantinha sua preferência por Rodrigo Pacheco.
+
+O principal instrumento dessa disputa foi o atraso estratégico. Alcolumbre manteve a indicação em suspenso por cinco meses, ampliando o desgaste político, permitindo a articulação da oposição e criando condições para dissidências dentro da própria base governista.
+
+
+**leitura do placar: o fracasso da "aritmética do Planalto"**
+
+
+A estratégia do governo fracassou no momento decisivo. Embora Messias tenha sido aprovado na Comissão de Constituição e Justiça (CCJ) por 16 a 11, a derrota se concretizou no voto secreto em plenário. A base governista contava com cerca de 25 votos firmes e apostava na adesão de indecisos, que acabaram se posicionando majoritariamente contra a indicação.
+O resultado de Messias representa uma queda expressiva em comparação com aprovações recentes consideradas apertadas:
+
+
+•	Luiz Fux (2011): 68 votos
+
+•	Cristiano Zanin (2023): 58 votos
+
+•	Kassio Nunes Marques (2020): 57 votos
+
+•	Flávio Dino (2023): 47 votos
+
+•	André Mendonça (2021): 47 votos
+
+**•	Jorge Messias (2026): 34 votos (rejeitado)**
+
+
+Ficar sete votos abaixo do mínimo necessário evidencia uma insurreição legislativa que o governo não conseguiu prever, nem conter.
+
+
+**O “sujeito oculto”: Moraes e o PL da Dosimetria**
+
+
+Nos bastidores, a rejeição de Messias integrou uma ofensiva legislativa mais ampla. Analistas apontam o ministro Alexandre de Moraes como o “sujeito oculto” desse movimento político.
+
+A decisão do Senado coincidiu com a derrubada do veto presidencial ao chamado "PL da Dosimetria", que reduz penas relacionadas aos eventos de 8 de janeiro. A medida representa um desafio direto à condução desses casos pelo STF. Ao rejeitar o indicado à Suprema Corte e, simultaneamente, aprovar legislação que enfraquece decisões judiciais de grande repercussão, o Senado sinaliza uma tentativa de reconfigurar o eixo de poder entre STF e Executivo.
+
+
+**Uma nova era de tensão entre Executivo e Legislativo**
+
+
+As consequências são imediatas, tanto práticas quanto simbólicas. O STF passa a operar com apenas dez ministros, o que aumenta o risco de empates e contribui para o acúmulo de processos, pressionando ainda mais o sistema judiciário.
+
+Embora o presidente Lula mantenha a prerrogativa constitucional de indicar um novo nome, podendo, inclusive, reapresentar Messias, o presidente enfrenta agora um Senado mais assertivo, que abandonou o papel de instância meramente homologatória e praticamente inerte. A rejeição marca a transição de um período de predominância presidencial para outro de protagonismo legislativo.
+
+Resta saber se esse novo equilíbrio representa um fortalecimento dos freios e contrapesos ou uma escalada rumo à instabilidade institucional. O fato é que o Senado reafirmou sua autonomia e, com isso, tornou o caminho até o Supremo definitivamente mais incerto.
+    `,
   }
 
 ];
