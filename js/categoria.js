@@ -1,5 +1,5 @@
 import { articles, categories } from './articles.js';
-import { initNavbar, initMobileMenu, initThemeToggle, formatDate, navigateTo } from './main.js';
+import { initNavbar, initMobileMenu, initThemeToggle, formatDate, navigateTo, handleImgError } from './main.js';
 
 initNavbar();
 initMobileMenu();
@@ -49,7 +49,7 @@ function renderGrid(cat) {
     <div class="latest-grid">
       ${filtered.map(a => `
         <article class="card" onclick="navigateTo('artigo',{id:${a.id}})" role="button" tabindex="0" aria-label="${a.title}">
-          <img class="card-img" src="${a.image}" alt="${a.title}" loading="lazy">
+          <img class="card-img" src="${a.image}" alt="${a.title}" loading="lazy" onerror="handleImgError(this)">
           <div class="card-body">
             <span class="badge">${a.categoryLabel}</span>
             <div class="card-meta">
@@ -76,3 +76,4 @@ window.switchCat = (cat) => {
 };
 
 window.navigateTo = navigateTo;
+window.handleImgError = handleImgError;

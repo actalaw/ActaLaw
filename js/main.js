@@ -71,3 +71,11 @@ export function navigateTo(page, params = {}) {
   const qs = new URLSearchParams(params).toString();
   window.location.href = qs ? `${page}?${qs}` : page;
 }
+
+export function handleImgError(img) {
+  img.style.display = 'none';
+  const placeholder = document.createElement('div');
+  placeholder.className = 'img-broken';
+  placeholder.textContent = '⚖️';
+  img.parentNode.insertBefore(placeholder, img);
+}

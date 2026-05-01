@@ -1,5 +1,5 @@
 import { articles, categories } from './articles.js';
-import { initNavbar, initMobileMenu, initThemeToggle, formatDate, navigateTo } from './main.js';
+import { initNavbar, initMobileMenu, initThemeToggle, formatDate, navigateTo, handleImgError } from './main.js';
 
 initNavbar();
 initMobileMenu();
@@ -13,7 +13,7 @@ function cardHTML(a, imgHeight = '200px') {
   return `
     <article class="card" onclick="navigateTo('artigo', {id:${a.id}})" role="button" tabindex="0"
       aria-label="${a.title}">
-      <img class="card-img" src="${a.image}" alt="${a.title}" style="height:${imgHeight}" loading="lazy">
+      <img class="card-img" src="${a.image}" alt="${a.title}" style="height:${imgHeight}" loading="lazy" onerror="handleImgError(this)">
       <div class="card-body">
         <span class="badge">${a.categoryLabel}</span>
         <div class="card-meta">
@@ -83,6 +83,7 @@ function renderCategories() {
 }
 
 window.navigateTo = navigateTo;
+window.handleImgError = handleImgError;
 
 document.querySelectorAll('.card, .cat-card').forEach(el => {
   el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); } });

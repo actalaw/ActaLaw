@@ -1173,6 +1173,18 @@ p {
   }
 }
 
+.img-broken {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-size: 2.5rem;
+  border-radius: var(--radius-sm);
+  min-height: 160px;
+  width: 100%;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;

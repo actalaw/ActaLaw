@@ -1,5 +1,5 @@
 import { articles } from './articles.js';
-import { initNavbar, initMobileMenu, initThemeToggle, formatDate, navigateTo } from './main.js';
+import { initNavbar, initMobileMenu, initThemeToggle, formatDate, navigateTo, handleImgError } from './main.js';
 
 initNavbar();
 initMobileMenu();
@@ -48,7 +48,7 @@ function renderArticle(a) {
     </div>
     <div class="section article-layout">
       <div>
-        <img class="article-img" src="${a.image}" alt="${a.title}">
+        <img class="article-img" src="${a.image}" alt="${a.title}" onerror="handleImgError(this)">
         <div class="article-body">${(window.marked?.parse ?? (s => `<pre>${s}</pre>`))(a.content.trim())}</div>
       </div>
       <aside class="article-sidebar" id="sidebar"></aside>
@@ -79,3 +79,4 @@ function renderSidebar(current) {
 }
 
 window.navigateTo = navigateTo;
+window.handleImgError = handleImgError;
