@@ -90,11 +90,11 @@ Em resumo: o princípio da consunção existe para evitar que o réu seja punido
     category: "direito-penal",
     categoryLabel: "Direito Penal",
     date: "2026-04-27",
-    readTime: 7,
+    readTime: 2,
     featured: true,
     image: "https://images.unsplash.com/photo-1453945619913-79ec89a82c51?w=900&q=80",
     excerpt: "Não é raro ver notícias de pessoas condenadas a 100, 200 ou até 300 anos de prisão. Na prática, esse tempo nunca será cumprido integralmente. Entenda por que e o que muda na vida do condenado.",
-    tags: [],
+    tags: ["prisao","pena","crime"],
     content: `
 Nos Estados Unidos, condenações a centenas de anos de prisão são relativamente comuns. No Brasil, também aparecem casos assim — principalmente em crimes múltiplos. Mas o que significa, na prática, uma pena de 140 anos? O condenado ficará preso por todo esse tempo?
 
