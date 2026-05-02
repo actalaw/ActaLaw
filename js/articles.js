@@ -49,11 +49,11 @@ export const articles = [
     category: "explicacoes",
     categoryLabel: "Educacional",
     date: "2026-04-28",
-    readTime: 5,
+    readTime: 2,
     featured: true,
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&q=80",
     excerpt: "Quando dois crimes se relacionam de forma muito próxima, pode ser que apenas um deles seja punido. Entenda como funciona esse princípio e por que ele existe.",
-    tags: [],
+    tags: ["pena","principios","crime"],
     content: `
 Imagine que alguém usa um documento falso para cometer uma fraude. Há dois crimes em jogo: a falsificação documental e o estelionato. Mas o réu será condenado pelos dois? É exatamente aí que o **princípio da consunção** entra em cena.
 
