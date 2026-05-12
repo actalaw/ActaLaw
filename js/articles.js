@@ -53,7 +53,7 @@ export const articles = [
     featured: true,
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&q=80",
     excerpt: "Quando dois crimes se relacionam de forma muito próxima, pode ser que apenas um deles seja punido. Entenda como funciona esse princípio e por que ele existe.",
-    tags: ['principio', 'crime', 'pena', 'absorcao', 'norma-penal', 'falsificacao', 'estelionato', 'tipicidade'],
+    tags: ["principio","crime","pena","absorcao","norma-penal","falsificacao","estelionato","tipicidade"],
     content: `
 Imagine que alguém usa um documento falso para cometer uma fraude. Há dois crimes em jogo: a falsificação documental e o estelionato. Mas o réu será condenado pelos dois? É exatamente aí que o **princípio da consunção** entra em cena.
 
@@ -94,7 +94,7 @@ Em resumo: o princípio da consunção existe para evitar que o réu seja punido
     featured: true,
     image: "https://images.unsplash.com/photo-1453945619913-79ec89a82c51?w=900&q=80",
     excerpt: "Não é raro ver notícias de pessoas condenadas a 100, 200 ou até 300 anos de prisão. Na prática, esse tempo nunca será cumprido integralmente. Entenda por que e o que muda na vida do condenado.",
-    tags: ['prisao', 'pena', 'condenacao', 'regime', 'progressao', 'pacote-anticrime', 'sentenca', 'codigo-penal'],
+    tags: ["prisao","pena","condenacao","regime","progressao","pacote-anticrime","sentenca","codigo-penal"],
     content: `
 Nos Estados Unidos, condenações a centenas de anos de prisão são relativamente comuns. No Brasil, também aparecem casos assim — principalmente em crimes múltiplos. Mas o que significa, na prática, uma pena de 140 anos? O condenado ficará preso por todo esse tempo?
 
@@ -129,11 +129,11 @@ Portanto: uma pena de 140 anos não é prisão perpétua — a Constituição n�
     category: "noticias",
     categoryLabel: "Notícias",
     date: "2026-04-25",
-    readTime: 4,
+    readTime: 1,
     featured: true,
-    image: "https://unsplash.com/pt-br/fotografias/fotografia-em-close-up-da-planta-de-cannabis-verde-PGc9Vid8O24?w=900&q=80",
+    image: "https://plus.unsplash.com/premium_photo-1697672423600-4c05924755b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNhbm5hYmlzJTIwc3RmfGVufDB8fDB8fHww",
     excerpt: "O Supremo Tribunal Federal concluiu o julgamento sobre a descriminalização do porte de drogas para consumo pessoal, em decisão que impacta milhares de processos em todo o país.",
-    tags: ['stf', 'drogas', 'descriminalizacao', 'porte', 'julgamento', 'liberdade', 'autonomia', 'crime'],
+    tags: ["stf","drogas","descriminalizacao","porte","julgamento","liberdade","autonomia","crime"],
     content: `
 O Supremo Tribunal Federal (STF) concluiu o histórico julgamento que discutia a constitucionalidade do artigo 28 da Lei 11.343/2006 (Lei de Drogas), que trata do porte de entorpecentes para uso pessoal. A decisão representa uma das mais relevantes do tribunal em matéria penal nas últimas décadas.
 
@@ -164,7 +164,7 @@ A decisão com efeito vinculante impacta todos os processos em andamento no paí
     featured: false,
     image: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=900&q=80",
     excerpt: "O habeas corpus é um dos remédios constitucionais mais antigos e importantes do direito brasileiro. Entenda o que ele é, quando cabe e quem pode impetrar.",
-    tags: ['habeas-corpus', 'liberdade', 'prisao', 'remedio-constitucional', 'constituicao', 'coacao', 'direito-fundamental'],
+    tags: ["habeas-corpus","liberdade","prisao","remedio-constitucional","constituicao","coacao","direito-fundamental"],
     content: `
 O *habeas corpus* — expressão do latim que significa, literalmente, "que tenhas o teu corpo" — é uma ação constitucional destinada a proteger a liberdade de locomoção. Qualquer pessoa que esteja sofrendo ou ameaçada de sofrer coação ilegal em sua liberdade pode se valer desse instrumento.
 
@@ -203,7 +203,7 @@ O habeas corpus pode ser **liberatório**, quando busca soltar alguém já preso
     featured: false,
     image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=900&q=80",
     excerpt: "O projeto de reforma do Código Penal brasileiro prevê mudanças significativas na estrutura das penas, nos crimes contra a honra e na regulamentação dos crimes digitais.",
-    tags: ['reforma', 'codigo-penal', 'crime-digital', 'pena', 'projeto-lei', 'honra', 'tipificacao'],
+    tags: ["reforma","codigo-penal","crime-digital","pena","projeto-lei","honra","tipificacao"],
     content: `
 O Brasil discute uma ampla reforma do Código Penal — legislação que, em sua versão original, data de 1940 e já passou por inúmeras modificações pontuais ao longo das décadas. O projeto em tramitação no Congresso propõe mudanças estruturais que podem transformar significativamente o sistema penal brasileiro.
 
@@ -240,7 +240,7 @@ O projeto ainda está em tramitação e deve passar por várias modificações a
     featured: false,
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80",
     excerpt: "Furtar um chiclete pode configurar crime de furto, mas o réu será punido? O princípio da insignificância — ou bagatela — responde a essa pergunta de forma surpreendente.",
-    tags: ['principio', 'insignificancia', 'bagatela', 'crime', 'tipicidade', 'stf', 'furto', 'pena'],
+    tags: ["principio","insignificancia","bagatela","crime","tipicidade","stf","furto","pena"],
     content: `
 Alguém furta um chiclete em um supermercado. Tecnicamente, praticou um crime de furto, previsto no art. 155 do Código Penal. Mas será que o Estado deve mobilizar toda a máquina do Judiciário para processar e condenar essa pessoa? É aqui que entra o **princípio da insignificância**.
 
