@@ -8,6 +8,7 @@
 //   node render.mjs <projeto> --de 10 --ate 20       → só um trecho
 //   node render.mjs --galeria [--stills] [--saida d] → demonstração de todos os templates, sem vídeo
 //   --formatos 9x16,1x1,16x9 sobrescreve os formatos do plano.
+//   --sem-normalizar mantém o áudio sem normalização de loudness (-14 LUFS).
 import fs from 'node:fs';
 import {createRequire} from 'node:module';
 import os from 'node:os';
@@ -30,6 +31,25 @@ const navegador = () => {
   return exe && fs.existsSync(exe) ? exe : undefined;
 };
 const browserExecutable = navegador();
+
+// Loudness padrão das redes (-14 LUFS, pico -1,5 dBTP), em duas passadas (linear, sem "bombear").
+const ALVO = 'I=-14:TP=-1.5:LRA=11';
+const normalizarAudio = (arquivo) => {
+  const medida = executar('ffmpeg', ['-v', 'info', '-i', arquivo, '-af', `loudnorm=${ALVO}:print_format=json`, '-f', 'null', '-']).stderr;
+  const json = medida.slice(medida.lastIndexOf('{'), medida.lastIndexOf('}') + 1);
+  let m;
+  try {
+    m = JSON.parse(json);
+  } catch {
+    return console.warn('⚠ não foi possível medir o loudness; áudio mantido como está');
+  }
+  if (!Number.isFinite(Number(m.input_i))) return; // vídeo sem áudio audível
+  const tmp = arquivo.replace(/\.mp4$/, '.norm.mp4');
+  const filtro = `loudnorm=${ALVO}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`;
+  executar('ffmpeg', ['-y', '-v', 'error', '-i', arquivo, '-c:v', 'copy', '-af', filtro, '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', tmp]);
+  fs.renameSync(tmp, arquivo);
+  console.log(`  áudio: ${Number(m.input_i).toFixed(1)} → -14 LUFS`);
+};
 
 // ---------- montar inputProps ----------
 let dir;
@@ -153,5 +173,6 @@ for (const formato of formatos) {
       }
     },
   });
+  if (!args['sem-normalizar']) normalizarAudio(outputLocation);
   console.log(`✓ ${outputLocation} (${((Date.now() - t1) / 1000).toFixed(0)} s)`);
 }

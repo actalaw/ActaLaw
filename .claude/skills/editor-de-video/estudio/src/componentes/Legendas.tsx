@@ -6,12 +6,12 @@ import {normalizar} from '../util/tempo';
 
 type Bloco = {palavras: Palavra[]; i: number; fimExibicao: number};
 
-const MAX_CARACTERES = 20;
 // Palavras que não devem ficar sozinhas no fim de um bloco ("com | o Claude" → "com o Claude").
 const LIGACAO = new Set(['a', 'o', 'as', 'os', 'e', 'é', 'de', 'do', 'da', 'dos', 'das', 'em', 'no', 'na', 'nos', 'nas', 'um', 'uma', 'com', 'por', 'pra', 'para', 'que', 'se', 'ao', 'à', 'eu', 'ele', 'ela', 'me', 'te', 'lhe', 'mas', 'ou', 'nem']);
 
 // Agrupa palavras em blocos curtos (estilo reels): quebra por quantidade, pontuação ou pausa.
-export const montarBlocos = (palavras: Palavra[], porBloco: number): Bloco[] => {
+// Em maiúsculas o texto é mais largo: blocos menores para caber em uma linha no 9:16.
+export const montarBlocos = (palavras: Palavra[], porBloco: number, maxCaracteres = 20): Bloco[] => {
   const blocos: Bloco[] = [];
   let atual: Palavra[] = [];
   palavras.forEach((w, k) => {
@@ -24,7 +24,7 @@ export const montarBlocos = (palavras: Palavra[], porBloco: number): Bloco[] => 
       /[.!?…;:]$/.test(w.t) ||
       (/,$/.test(w.t) && atual.length >= 2) ||
       prox.i - w.f > 0.35 ||
-      chars + prox.t.length > MAX_CARACTERES;
+      chars + prox.t.length > maxCaracteres;
     if (fechar) {
       // Fechou por tamanho com uma palavra de ligação no fim? Ela passa para o próximo bloco.
       const pontuado = /[.!?…;:,]$/.test(w.t);
@@ -52,13 +52,16 @@ export const Legendas: React.FC<{
   tamanho: number; // px da fonte
 }> = ({t, fps, palavras, config, tamanho}) => {
   const tema = useTema();
-  const blocos = useMemo(() => montarBlocos(palavras, config.palavrasPorBloco ?? 3), [palavras, config.palavrasPorBloco]);
+  const maiusculas = config.maiusculas !== false;
+  const blocos = useMemo(
+    () => montarBlocos(palavras, config.palavrasPorBloco ?? 3, maiusculas ? 16 : 20),
+    [palavras, config.palavrasPorBloco, maiusculas],
+  );
   const destaques = useMemo(() => new Set((config.destaques ?? []).map(normalizar)), [config.destaques]);
   const bloco = blocos.find((b) => t >= b.i && t < b.fimExibicao);
   if (!bloco) return null;
 
   const pop = spring({frame: Math.round((t - bloco.i) * fps), fps, config: {damping: 14, stiffness: 220, mass: 0.6}});
-  const maiusculas = config.maiusculas !== false;
 
   return (
     <div
