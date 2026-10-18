@@ -1,2 +1,9 @@
 # Painel admin — apenas local, não deve ir para o GitHub Pages
 admin/
+
+# Editor de vídeo (.claude/skills/editor-de-video) — vídeos e artefatos ficam só local
+videos/
+.claude/skills/editor-de-video/estudio/node_modules/
+.claude/skills/editor-de-video/estudio/public/atual/
+.claude/skills/editor-de-video/estudio/public/musica/*
+!.claude/skills/editor-de-video/estudio/public/musica/README.md

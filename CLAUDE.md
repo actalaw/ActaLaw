@@ -110,6 +110,23 @@ npx serve .
 
 Acesse `http://localhost:8080`.
 
+## Editor de vídeo (`/editor-de-video`)
+
+Skill de projeto em `.claude/skills/editor-de-video/` que transforma o Claude em editor de vídeo para os reels do ActaLaw. Basta enviar a gravação bruta e pedir para editar. O fluxo:
+
+1. transcrição palavra a palavra (Groq Whisper)
+2. cortes automáticos (silêncios, hesitações, retakes)
+3. leitura dos frames
+4. plano de cenas sincronizado à fala
+5. **aprovação do plano com prévia em imagens**
+6. render com Remotion: legendas animadas, cenas com a marca, zooms, trilha com ducking e SFX, em 9:16 / 1:1 / 16:9
+
+- Instruções completas: `.claude/skills/editor-de-video/SKILL.md`. O catálogo de cenas está em `referencia/plano-schema.md`.
+- Gosto aprendido com o usuário: `referencia/preferencias.md`. Ele é atualizado a cada feedback.
+- Pasta de trabalho: `videos/<slug>/`, no `.gitignore`. Os vídeos nunca vão para o repositório nem para o site.
+- Requisitos na nuvem: variável `GROQ_API_KEY` e domínio `api.groq.com` liberado na rede do ambiente. Sem isso, use `--srt`.
+- Galeria dos templates: `node .claude/skills/editor-de-video/scripts/render.mjs --galeria --stills`.
+
 ## Imagens para artigos
 
 Use o **Unsplash** (https://unsplash.com) para imagens gratuitas de alta qualidade.

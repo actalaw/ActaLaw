@@ -1,0 +1,23 @@
+{
+  "name": "actalaw-estudio",
+  "private": true,
+  "description": "Estúdio Remotion do editor de vídeo do ActaLaw (usado pela skill /editor-de-video)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "5.3.0",
+    "@fontsource/outfit": "5.3.0",
+    "@remotion/bundler": "4.0.531",
+    "@remotion/cli": "4.0.531",
+    "@remotion/renderer": "4.0.531",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.531"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}
